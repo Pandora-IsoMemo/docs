@@ -7,10 +7,6 @@
         "URL": "https://packagemanager.posit.co/cran/2024-06-14"
       },
       {
-        "Name": "INWT",
-        "URL": "https://r-repo.core.cld.htz.int.inwt.de"
-      },
-      {
         "Name": "INWTLab",
         "URL": "https://inwtlab.github.io/drat"
       }
