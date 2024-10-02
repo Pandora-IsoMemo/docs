@@ -1,0 +1,25 @@
+# FAQ
+
+##  Docker - container port is already allocated
+
+In case the following error occurs
+
+```
+docker: Error response from daemon: driver failed <...> Bind for 0.0.0.0:3838 failed: port is already allocated.
+```
+
+One must **stop the container that is still running**. This can be done as follows:
+
+1. **Check** which container is running.  
+  `docker ps` - list all running containers and should generate a similiar output like:
+   ```
+   CONTAINER ID   IMAGE                                     COMMAND                  CREATED             STATUS             PORTS                                       NAMES
+   eddc62f0081d   ghcr.io/pandora-isomemo/osteo-bior:main   "Rscript -e OsteoBio…"   About an hour ago   Up About an hour   0.0.0.0:3838->3838/tcp, :::3838->3838/tcp   confident_colden
+   ```
+2. **Stop** the container using exactly the `CONTAINER ID` from above (here: `eddc62f0081d`).  
+   `docker stop <YOUR_CONTAINER_ID>` - stops one or more running containers.
+3. **Remove** the container using exactly the `CONTAINER ID`.  
+   `docker rm <YOUR_CONTAINER_ID>` - remove one or more containers
+4. **Check** if no container is running anymore.  
+   `docker ps` - the table should be empty now.  
+   Now try to run the container.

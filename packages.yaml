@@ -1,0 +1,57 @@
+categories:
+  apps:
+    - name: "DSSM"
+      repo_url: "https://github.com/Pandora-IsoMemo/DSSM"
+      doc_url: "https://pandora-isomemo.github.io/DSSM/"
+      app_url: "https://pandoraapp.earth/app/dssm"
+      app_beta_url: "https://pandoraapp.earth/app/dssm-beta"
+      docker_image: "dssm"
+      img: "img/dssm.jpg"
+
+    - name: "ReSources"
+      repo_url: "https://github.com/Pandora-IsoMemo/ReSources"
+      doc_url: "https://pandora-isomemo.github.io/ReSources/"
+      app_url: "https://pandoraapp.earth/app/resources"
+      app_beta_url: "https://pandoraapp.earth/app/resources-beta"
+      docker_image: "resources"
+      img: "img/resources.jpg"
+
+    - name: "BMSCS"
+      repo_url: "https://github.com/Pandora-IsoMemo/BMSCS"
+      doc_url: "https://pandora-isomemo.github.io/BMSCS/"
+      app_url: "https://pandoraapp.earth/app/bmscs"
+      app_beta_url: "https://pandoraapp.earth/app/bmscs-beta"
+      docker_image: "bmscs"
+      img: "img/bmscs.jpg"
+    
+    # - name: "PlotR"
+    # - name: "Bpred"
+    # - name: "BNR"
+    # - name: "oxcAARS"
+    # - name: "ABMS"
+    # - name: "deBInferS"
+    # - name: "TraceR"
+    # - name: "CausalR"
+    # - name: "OsteoBioR"
+  
+  apis:
+    - name: "Pandora"
+      repo_url: "https://github.com/Pandora-IsoMemo/pandora-data"
+      doc_url: "https://pandora-isomemo.github.io/pandora-data/"
+  
+    - name: "Isomemo"
+      repo_url: "https://github.com/Pandora-IsoMemo/isomemo-data"
+      doc_url: "https://pandora-isomemo.github.io/isomemo-data/"
+  
+    # - name: iso-api
+  
+  other:
+    - name: "DataTools"
+      repo_url: "https://github.com/Pandora-IsoMemo/data-tools"
+      doc_url: "https://pandora-isomemo.github.io/data-tools/"
+  
+    - name: "shinyTools"
+      repo_url: "https://github.com/Pandora-IsoMemo/shiny-tools"
+      doc_url: "https://pandora-isomemo.github.io/shiny-tools/"
+  
+    # - name: bmsc

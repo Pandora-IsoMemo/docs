@@ -1,0 +1,8 @@
+# Pandora &  IsoMemo Computational Lab
+
+The Pandora & IsoMemo Computational Lab provides access to a diverse range of computational tools, including Artificial Intelligence (AI), for data querying, manipulation, and modeling. The lab encompasses various types of models across numerous R and Python applications. These models, either already available or under development, are designed for studying complex systems such as network analysis, Bayesian analysis of differential equations, Agent-Based modeling, and Bayesian power law analysis. Additionally, the lab offers tools for time series analysis, such as Bayesian counterfactual analysis, Bayesian Point Break analysis, and AI-based tipping point detection. Other features include tools for spatiotemporal modeling and different types of causal analysis, such as Bayesian networks, Bayesian regression, and Bayesian model selection algorithms.
+
+The currently available Pandora & IsoMemo software can be accessed on the Pandora & IsoMemo software platform on GitHub. Each software repository provides detailed instructions on installation and usage. All software features a user-friendly interface developed using Shiny technology. Many of the applications offer innovative self-developed modeling. In some instances, user-friendly interfaces along with novel modeling features were developed in collaboration with the developers of modeling software packages. In other cases, user-friendly interfaces were designed for software packages available under open licenses
+
+Explore comprehensive documentation and resources for all our apps and packages.
+

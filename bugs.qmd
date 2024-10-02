@@ -1,0 +1,13 @@
+# Bug Reports
+
+If you have issues installing the packages, please read the FAQ section first. If the FAQ can't
+provide you with a solution to your problem, please create an issue with the package name and 
+what steps you have already done, preferably as descriptive as possible (screenshots, etc.). We
+will get back to you as soon as we can to solve the issue.
+
+**Please provide:**
+
+> - All commands that led to the installation error: 
+> - The full output of `sessionInfo()`
+> - The output of `options("repos")`
+
