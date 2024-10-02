@@ -5,29 +5,33 @@ website:
   announcement: 
     icon: info-circle
     dismissable: false
-    content: "**This side is still under construction**"
+    content: "**This site is still under construction.**"
     type: warning
     position: below-navbar
   title: "Pandora & IsoMemo Documentation Hub"
   search: true
   navbar:
+    background: white
     left:
       - href: index.qmd
         text: Home
       - href: apps.qmd
-        text: Apps
+        text: Shiny Apps
       - href: faq.qmd
         text: FAQ
       - href: bugs.qmd
         text: Bug Reports
-    right:
-      - icon: fa-brands fa-github
-        href: "https://github.com/Pandora-IsoMemo"
+    tools:
+      - icon: github
+        href: https://github.com/Pandora-IsoMemo
+  page-footer: "Pandora & IsoMemo Comutational Lab"
 
 format:
   html:
     echo: false
-    theme: cosmos
-    #css: templates/2col/assets/css/tailwind/tailwind.min.css
-    #css: templates/assets/css/theme.css
-    toc: true
+    theme:
+      - flatly
+      - style.scss
+    grid:
+      body-width: 1280px
+    smooth-scroll: true

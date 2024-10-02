@@ -1,0 +1,31 @@
+/*-- scss:defaults --*/
+
+// colors
+$purple: #591FF9 !default;
+$darkblue: #1b2559 !default;
+$grey: #707EAE !default;
+
+// body
+$body-color: $grey !default;
+
+$primary: $darkblue !default;
+$secondary: $purple !default;
+
+// links
+$link-hover-color: $purple;
+$link-color: $purple;
+
+$headings-color: $darkblue !default;
+
+
+// buttons
+.btn.btn-outline-primary {
+  color: $purple;
+  border-color: $purple;
+}
+
+.btn.btn-outline-primary:hover {
+  color: white;
+  background-color: $purple;
+  border-color: $purple;
+}

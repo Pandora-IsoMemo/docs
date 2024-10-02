@@ -1,6 +1,22 @@
 categories:
   apps:
+    - name: "BMSCS"
+      full_name: "Bayesian Model Selection under Constraints"
+      info_text: |
+        BMSC is a Bayesian model selection algorithm used for causal analysis
+        and other applications.
+      repo_url: "https://github.com/Pandora-IsoMemo/BMSCS"
+      doc_url: "https://pandora-isomemo.github.io/BMSCS/"
+      app_url: "https://pandoraapp.earth/app/bmscs"
+      app_beta_url: "https://pandoraapp.earth/app/bmscs-beta"
+      docker_image: "bmscs"
+      img: "img/bmscs.jpg"
+
     - name: "DSSM"
+      full_name: "Data Search and Spatiotemporal Modelling"
+      info_text: |
+        In addition to allowing users to query Pandora data includes different
+        types of Bayesian and non-Bayesian spatiotemporal models.
       repo_url: "https://github.com/Pandora-IsoMemo/DSSM"
       doc_url: "https://pandora-isomemo.github.io/DSSM/"
       app_url: "https://pandoraapp.earth/app/dssm"
@@ -9,6 +25,8 @@ categories:
       img: "img/dssm.jpg"
 
     - name: "ReSources"
+      full_name: "Food Reconstruction Using Isotopic Transferred Signals"
+      info_text: "Bayesian mixing model."
       repo_url: "https://github.com/Pandora-IsoMemo/ReSources"
       doc_url: "https://pandora-isomemo.github.io/ReSources/"
       app_url: "https://pandoraapp.earth/app/resources"
@@ -16,42 +34,41 @@ categories:
       docker_image: "resources"
       img: "img/resources.jpg"
 
-    - name: "BMSCS"
-      repo_url: "https://github.com/Pandora-IsoMemo/BMSCS"
-      doc_url: "https://pandora-isomemo.github.io/BMSCS/"
-      app_url: "https://pandoraapp.earth/app/bmscs"
-      app_beta_url: "https://pandoraapp.earth/app/bmscs-beta"
-      docker_image: "bmscs"
-      img: "img/bmscs.jpg"
-    
-    # - name: "PlotR"
     # - name: "Bpred"
-    # - name: "BNR"
+
+    # - name: "PlotR"
+
+    # - name: "OsteoBioR"
+
+    # - name: "TraceR"
+
+    # - name: "MapR"
+
+    # - name: "CausalR"
+
+    # - name: "BNR Project"
     # - name: "oxcAARS"
     # - name: "ABMS"
     # - name: "deBInferS"
-    # - name: "TraceR"
-    # - name: "CausalR"
-    # - name: "OsteoBioR"
-  
+
   apis:
     - name: "Pandora"
       repo_url: "https://github.com/Pandora-IsoMemo/pandora-data"
       doc_url: "https://pandora-isomemo.github.io/pandora-data/"
-  
+
     - name: "Isomemo"
       repo_url: "https://github.com/Pandora-IsoMemo/isomemo-data"
       doc_url: "https://pandora-isomemo.github.io/isomemo-data/"
-  
+
     # - name: iso-api
-  
+
   other:
     - name: "DataTools"
       repo_url: "https://github.com/Pandora-IsoMemo/data-tools"
       doc_url: "https://pandora-isomemo.github.io/data-tools/"
-  
+
     - name: "shinyTools"
       repo_url: "https://github.com/Pandora-IsoMemo/shiny-tools"
       doc_url: "https://pandora-isomemo.github.io/shiny-tools/"
-  
+
     # - name: bmsc

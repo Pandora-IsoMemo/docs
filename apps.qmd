@@ -1,36 +1,24 @@
+---
+title: Shiny Apps
+---
+
 ```{r readyaml}
 library(yaml)
 info <- yaml::yaml.load_file('packages.yaml')
 ```
+
 ```{r generatecontent}
 #| output: asis
 for (app in info$categories$apps) {
-  cat('#', app$name, '\n')
-  
-  if (file.exists(app$img)) {
-    cat(
-      '<img src="',
-      app$img,
-      '" alt="',
-      app$name,
-      ' Image" style="width:100%;max-width:600px;">\n\n',
-      sep=""
-    )
-  } else {
-    cat('No image available.\n\n')
-  }
+  cat('#', app$name, "-", app$full_name, '\n')
 
-  cat('::: {.panel-tabset}\n')
-  cat('##', app$name, '\n')
-  
- 
   cat(
     ' [GitHub Repository](',
     app$repo_url,
     '){.btn .btn-outline-primary .btn role="button"}\n'
   )
   cat(
-    '[Read Docs](',
+    '[Documentation](',
     app$doc_url,
     '){.btn .btn-outline-primary .btn role="button"}\n'
   )
@@ -44,6 +32,24 @@ for (app in info$categories$apps) {
     app$app_beta_url,
     '){.btn .btn-outline-primary .btn role="button"}\n\n'
   )
+
+  cat('::: {.panel-tabset}\n')
+  cat('##', app$name, '\n')
+
+  if (file.exists(app$img)) {
+    cat(
+      '<img src="',
+      app$img,
+      '" alt="',
+      app$name,
+      ' Image" style="width:100%;max-width:800px;">\n\n',
+      sep=""
+    )
+  } else {
+    cat('No image available.\n\n')
+  }
+
+  cat(app$info_text, "\n\n")
 
   instruction_template <- readLines("instructions.qmd")
   instruction_template <- gsub(
@@ -59,10 +65,6 @@ for (app in info$categories$apps) {
 
   cat(instruction_template, sep="\n")
   cat(':::\n')
-
-  # cat('### Instructions:\n')
-  # cat('```r\n')
-  # cat('docker pull ghcr.io/pandora/', app$docker_image, ':main\n', sep="")
-  # cat('```\n\n')
+  cat('\n\n')
 }
 ```
