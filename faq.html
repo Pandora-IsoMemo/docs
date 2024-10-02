@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>faq – Pandora &amp; IsoMemo Documentation Hub</title>
+<title>FAQ – Pandora &amp; IsoMemo Documentation Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -66,11 +100,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -93,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./apps.html"> 
-<span class="menu-text">Apps</span></a>
+<span class="menu-text">Shiny Apps</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./faq.html" aria-current="page"> 
@@ -104,66 +139,69 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Bug Reports</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/Pandora-IsoMemo"> <i class="bi bi-fa-brands fa-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+    <a href="https://github.com/Pandora-IsoMemo" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <div id="quarto-announcement" data-announcement-id="7ce8a5da68ed4dd1e6eeca1aa11a1608" class="alert alert-warning hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>This side is still under construction</strong></p>
+  <div id="quarto-announcement" data-announcement-id="3df4bccf891188e13bac83bf24af322b" class="alert alert-warning hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>This site is still under construction.</strong></p>
 </div></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#faq" id="toc-faq" class="nav-link active" data-scroll-target="#faq">FAQ</a>
-  <ul class="collapse">
-  <li><a href="#docker---container-port-is-already-allocated" id="toc-docker---container-port-is-already-allocated" class="nav-link" data-scroll-target="#docker---container-port-is-already-allocated">Docker - container port is already allocated</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">FAQ</h1>
+</div>
 
 
 
-<section id="faq" class="level1">
-<h1>FAQ</h1>
-<section id="docker---container-port-is-already-allocated" class="level2">
-<h2 class="anchored" data-anchor-id="docker---container-port-is-already-allocated">Docker - container port is already allocated</h2>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="docker---container-port-is-already-allocated" class="level1">
+<h1>Docker - container port is already allocated</h1>
 <p>In case the following error occurs</p>
-<pre><code>docker: Error response from daemon: driver failed &lt;...&gt; Bind for 0.0.0.0:3838 failed: port is already allocated.</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker:</span> Error response from daemon: driver failed <span class="op">&lt;</span>...<span class="op">&gt;</span> Bind for 0.0.0.0:3838 failed: port is already allocated.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>One must <strong>stop the container that is still running</strong>. This can be done as follows:</p>
-<ol type="1">
-<li><p><strong>Check</strong> which container is running.<br>
-<code>docker ps</code> - list all running containers and should generate a similiar output like:</p>
-<pre><code>CONTAINER ID   IMAGE                                     COMMAND                  CREATED             STATUS             PORTS                                       NAMES
-eddc62f0081d   ghcr.io/pandora-isomemo/osteo-bior:main   "Rscript -e OsteoBio…"   About an hour ago   Up About an hour   0.0.0.0:3838-&gt;3838/tcp, :::3838-&gt;3838/tcp   confident_colden</code></pre></li>
-<li><p><strong>Stop</strong> the container using exactly the <code>CONTAINER ID</code> from above (here: <code>eddc62f0081d</code>).<br>
-<code>docker stop &lt;YOUR_CONTAINER_ID&gt;</code> - stops one or more running containers.</p></li>
-<li><p><strong>Remove</strong> the container using exactly the <code>CONTAINER ID</code>.<br>
-<code>docker rm &lt;YOUR_CONTAINER_ID&gt;</code> - remove one or more containers</p></li>
-<li><p><strong>Check</strong> if no container is running anymore.<br>
-<code>docker ps</code> - the table should be empty now.<br>
-Now try to run the container.</p></li>
-</ol>
+<section id="check-which-container-is-running-with" class="level2">
+<h2 class="anchored" data-anchor-id="check-which-container-is-running-with">1. Check which container is running with:</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>that list all running containers and should generate a similiar output like:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a> <span class="ex">CONTAINER</span> ID   IMAGE                                     COMMAND                  CREATED             STATUS             PORTS                                       NAMES</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> <span class="ex">eddc62f0081d</span>   ghcr.io/pandora-isomemo/osteo-bior:main   <span class="st">"Rscript -e OsteoBio…"</span>   About an hour ago   Up About an hour   0.0.0.0:3838-<span class="op">&gt;</span>3838/tcp, :::3838-<span class="op">&gt;</span>3838/tcp   confident_colden</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="stop-the-container-using-the-container-id-here-eddc62f0081d" class="level2">
+<h2 class="anchored" data-anchor-id="stop-the-container-using-the-container-id-here-eddc62f0081d">2. Stop the container using the <code>CONTAINER ID</code> (here: <code>eddc62f0081d</code>)</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> stop <span class="op">&lt;</span>YOUR_CONTAINER_ID<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="remove-the-container-using-the-container-id." class="level2">
+<h2 class="anchored" data-anchor-id="remove-the-container-using-the-container-id.">3. Remove the container using the <code>CONTAINER ID</code>.</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> rm <span class="op">&lt;</span>YOUR_CONTAINER_ID<span class="op">&gt;</span><span class="kw">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="check-if-no-container-is-running-anymore." class="level3">
+<h3 class="anchored" data-anchor-id="check-if-no-container-is-running-anymore.">4. Check if no container is running anymore.</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The table should be empty now. Try to run the container.</p>
 
 
+</section>
 </section>
 </section>
 
@@ -589,8 +627,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Pandora &amp; IsoMemo Comutational Lab</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
