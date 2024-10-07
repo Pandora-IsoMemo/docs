@@ -12,6 +12,43 @@ categories:
       docker_image: "bmscs"
       img: "img/bmscs.jpg"
 
+    - name: "BNR"
+      full_name: "Graphical Models & Constrained Bayesian Estimation"
+      info_text: |
+        This project leverages graphical models to perform queries with
+        constrained bayesian estimation. This work is developed as a Shiny app
+        in order to provide an easy and clean interaction.
+      repo_url: "https://github.com/Pandora-IsoMemo/BNR"
+      doc_url: "https://pandora-isomemo.github.io/BNR/"
+      app_url: "https://pandoraapp.earth/app/bnr"
+      app_beta_url: "https://pandoraapp.earth/app/bnr-beta"
+      docker_image: "bnr"
+      img: "img/bnr.png"
+
+    - name: "Bpred"
+      full_name: "Bayesian Prediction"
+      info_text: |
+        Bayesian multivariate regression application.
+      repo_url: "https://github.com/Pandora-IsoMemo/Bpred"
+      doc_url: "https://pandora-isomemo.github.io/Bpred/"
+      app_url: "https://pandoraapp.earth/app/bpred"
+      app_beta_url: "https://pandoraapp.earth/app/bpred-beta"
+      docker_image: "bpred"
+      img: "img/bpred.jpg"
+
+    - name: "CausalR"
+      full_name: "Causal Inference"
+      info_text: |
+        CausalR is an R-Shiny user-friendly interface for CausalImpact R 
+        package, which leverages the Bayesian modeling capabilities to estimate
+        the causal effect of an intervention on a time series.
+      repo_url: "https://github.com/Pandora-IsoMemo/CausalR"
+      doc_url: "https://pandora-isomemo.github.io/CausalR/"
+      app_url: "https://pandoraapp.earth/app/causalr"
+      app_beta_url: "https://pandoraapp.earth/app/causalr-beta"
+      docker_image: "causalr"
+      img: "img/causalr.png"
+
     - name: "DSSM"
       full_name: "Data Search and Spatiotemporal Modelling"
       info_text: |
@@ -24,6 +61,41 @@ categories:
       docker_image: "dssm"
       img: "img/dssm.jpg"
 
+    - name: "MapR"
+      full_name: "Display Graphical Files"
+      info_text: |
+        MapR displays temporal and temperature graphical files for Isomemo.
+      repo_url: "https://github.com/Pandora-IsoMemo/MapR"
+      doc_url: "https://pandora-isomemo.github.io/MapR/"
+      app_url: "https://pandoraapp.earth/app/mapr"
+      app_beta_url: "https://pandoraapp.earth/app/mapr-beta"
+      docker_image: "mapr"
+      img: "img/mapr.png"
+
+    - name: "OsteoBioR"
+      full_name: "Estimate Isotopic Values"
+      info_text: |
+        OsteoBioR is used to model sequential data where each measurement is
+        known to cover a time interval (integration time). This can be used,
+        among others, to model isotopic temporal trajectories from isotopic
+        measurements taken in multiple living tissues.
+      repo_url: "https://github.com/Pandora-IsoMemo/OsteoBioR"
+      doc_url: "https://pandora-isomemo.github.io/OsteoBioR/"
+      app_url: "https://pandoraapp.earth/app/osteobior"
+      app_beta_url: "https://pandoraapp.earth/app/osteobior-beta"
+      docker_image: "osteobior"
+      img: "img/osteobior.jpg"
+
+    - name: "PlotR"
+      full_name: "Smoothed Bayesian Plots"
+      info_text: "PlotR produces Bayesian smoothed plots."
+      repo_url: "https://github.com/Pandora-IsoMemo/PlotR"
+      doc_url: "https://pandora-isomemo.github.io/PlotR/"
+      app_url: "https://pandoraapp.earth/app/plotr"
+      app_beta_url: "https://pandoraapp.earth/app/plotr-beta"
+      docker_image: "plotr"
+      img: "img/plotr.jpg"
+
     - name: "ReSources"
       full_name: "Food Reconstruction Using Isotopic Transferred Signals"
       info_text: "Bayesian mixing model."
@@ -34,31 +106,29 @@ categories:
       docker_image: "resources"
       img: "img/resources.jpg"
 
-    # - name: "Bpred"
+    - name: "TraceR"
+      full_name: "Visualize Relational Maps"
+      info_text: |
+        TraceR helps to generate a visual representation of a relational map.
+      repo_url: "https://github.com/Pandora-IsoMemo/TraceR"
+      doc_url: "https://pandora-isomemo.github.io/TraceR/"
+      app_url: "https://pandoraapp.earth/app/tracer"
+      app_beta_url: "https://pandoraapp.earth/app/tracer-beta"
+      docker_image: "tracer"
+      img: "img/tracer.png"
 
-    # - name: "PlotR"
-
-    # - name: "OsteoBioR"
-
-    # - name: "TraceR"
-
-    # - name: "MapR"
-
-    # - name: "CausalR"
-
-    # - name: "BNR Project"
     # - name: "oxcAARS"
     # - name: "ABMS"
     # - name: "deBInferS"
 
   apis:
-    - name: "Pandora"
-      repo_url: "https://github.com/Pandora-IsoMemo/pandora-data"
-      doc_url: "https://pandora-isomemo.github.io/pandora-data/"
-
     - name: "Isomemo"
       repo_url: "https://github.com/Pandora-IsoMemo/isomemo-data"
       doc_url: "https://pandora-isomemo.github.io/isomemo-data/"
+    
+    - name: "Pandora"
+      repo_url: "https://github.com/Pandora-IsoMemo/pandora-data"
+      doc_url: "https://pandora-isomemo.github.io/pandora-data/"
 
     # - name: iso-api
 
