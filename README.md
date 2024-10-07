@@ -16,7 +16,6 @@ To add a new app or package to this documentation, you need to add an image
 to the `img` directory and define the app in the `packages.yaml` file as
 follows:
 
-
 ```yaml
 categories:
   apps:
