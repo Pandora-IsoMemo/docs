@@ -10,33 +10,55 @@ info <- yaml::yaml.load_file('packages.yaml')
 ```{r generatecontent}
 #| output: asis
 for (app in info$categories$apps) {
-  cat('#', app$name, "-", app$full_name, '\n')
+  # Header
+  cat('#', app$name)
+  if(!is.null(app$full_name)) {
+    cat(" -", app$full_name)
+  }
+  cat('\n')
 
-  cat(
-    ' [GitHub Repository](',
-    app$repo_url,
-    '){.btn .btn-outline-primary .btn role="button"}\n'
-  )
-  cat(
-    '[Documentation](',
-    app$doc_url,
-    '){.btn .btn-outline-primary .btn role="button"}\n'
-  )
-  cat(
-    '[Start App](',
-    app$app_url,
-    '){.btn .btn-outline-primary .btn role="button"}\n'
-  )
-  cat(
-    '[Start App (Beta)](',
-    app$app_beta_url,
-    '){.btn .btn-outline-primary .btn role="button"}\n\n'
-  )
+  # Add Repo Button
+  if (!is.null(app$repo_url)) {
+    cat(
+      ' [GitHub Repository](',
+      app$repo_url,
+      '){.btn .btn-outline-primary .btn role="button"}\n'
+    )
+  }
 
-  cat('::: {.panel-tabset}\n')
+  # Add Documentation Button
+  if (!is.null(app$doc_url)) {
+    cat(
+      '[Documentation](',
+      app$doc_url,
+      '){.btn .btn-outline-primary .btn role="button"}\n'
+    )
+  }
+
+  # Add App Button
+  if (!is.null(app$app_url)) {
+    cat(
+      '[Start App](',
+      app$app_url,
+      '){.btn .btn-outline-primary .btn role="button"}\n'
+    )
+  }
+
+  # Add App (Beta) Button
+  if (!is.null(app$app_beta_url)) {
+    cat(
+      '[Start App (Beta)](',
+      app$app_beta_url,
+      '){.btn .btn-outline-primary .btn role="button"}\n'
+    )
+  }
+
+  # Generate tabset enviroment
+  cat('\n::: {.panel-tabset}\n')
   cat('##', app$name, '\n')
 
-  if (file.exists(app$img)) {
+  # Add image of the app
+  if (!is.null(app$img) && file.exists(app$img)) {
     cat(
       '<img src="',
       app$img,
@@ -49,19 +71,59 @@ for (app in info$categories$apps) {
     cat('No image available.\n\n')
   }
 
-  cat(app$info_text, "\n\n")
-
+  # Add info text
+  if (!is.null(app$info_text)) {
+    cat(app$info_text, "\n\n")
+  }
+  
+  # Add Instructions
   instruction_template <- readLines("instructions.qmd")
-  instruction_template <- gsub(
-    "\\{docker-image\\}",
-    app$docker_image,
-    instruction_template
-  )
-  instruction_template <- gsub(
-    "\\{package\\}",
-    app$name,
-    instruction_template
-  )
+  if (!is.null(app$docker_image)) {
+    instruction_template <- gsub(
+      "\\{docker-image\\}",
+      app$docker_image,
+      instruction_template
+    )
+  }
+
+  if (!is.null(app$name)) {
+    instruction_template <- gsub(
+      "\\{package\\}",
+      app$name,
+      instruction_template
+    )
+  }
+
+  # Remove rstantools section if not used
+  if (is.null(app$is_stan)) {
+    start <- grep("### Generate C++ Code", instruction_template, fixed = TRUE)
+    end <- grep("### Install Package", instruction_template, fixed = TRUE)
+    if (length(start) > 0 && length(end) > 0 && start < end) {
+        instruction_template <- instruction_template[-(start:(end-1))]
+    }
+  }
+
+  # Remove install package section
+  if (!is.null(app$is_renv)) {
+    # renv
+    start <- grep("### Install Package", instruction_template, fixed = TRUE)
+    end <- grep("### Use Renv", instruction_template, fixed = TRUE)
+    if (length(start) > 0 && length(end) > 0 && start < end) {
+        instruction_template <- instruction_template[-(start:(end-1))]
+    }
+  }
+
+  # Remove renv section
+  else {
+    #nicht renv
+    start <- grep("### Use Renv", instruction_template, fixed = TRUE)
+    end <- length(instruction_template) + 1
+    if (length(start) > 0 && length(end) > 0 && start < end) {
+        instruction_template <- instruction_template[-(start:(end-1))]
+    }
+  }
+
+
 
   cat(instruction_template, sep="\n")
   cat(':::\n')

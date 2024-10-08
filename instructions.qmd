@@ -71,13 +71,13 @@ http://127.0.0.1:3838/
 
 ## Local Installation
 
-### 1. Install R
+### Install R
 
 - [Windows](https://cran.r-project.org/bin/windows/base/)
 - [MacOS](https://cran.r-project.org/bin/macosx/)
 - [Linux (Ubuntu)](https://cran.r-project.org/bin/linux/ubuntu/)
 
-### 2. Download the app
+### Add Repositories
 
 Open a local R Console and add these two additional Repositories.
 
@@ -90,6 +90,17 @@ options(
   )
 )
 ```
+
+### Generate C++ Code
+
+(Re-)generate `R/rstanmodel.R` and the C++ Source Code:
+
+```r
+# install.packages("rstantools")
+rstantools::rstan_config()
+```
+
+### Install Package
 
 Load and Install the R-Package
 
@@ -109,4 +120,21 @@ Run the app
 
 ```r
 {package}::startApplication()
+```
+
+### Use Renv
+
+Install `R` dependencies with `renv`
+
+```r
+# install.packages("renv")
+renv::restore()
+```
+
+### Run the shinyapp
+
+Run the application by executing:
+
+```r
+shiny::runApp()
 ```
