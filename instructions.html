@@ -212,15 +212,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="local-installation" class="level2">
 <h2 class="anchored" data-anchor-id="local-installation">Local Installation</h2>
 <section id="install-r" class="level3">
-<h3 class="anchored" data-anchor-id="install-r">1. Install R</h3>
+<h3 class="anchored" data-anchor-id="install-r">Install R</h3>
 <ul>
 <li><a href="https://cran.r-project.org/bin/windows/base/">Windows</a></li>
 <li><a href="https://cran.r-project.org/bin/macosx/">MacOS</a></li>
 <li><a href="https://cran.r-project.org/bin/linux/ubuntu/">Linux (Ubuntu)</a></li>
 </ul>
 </section>
-<section id="download-the-app" class="level3">
-<h3 class="anchored" data-anchor-id="download-the-app">2. Download the app</h3>
+<section id="add-repositories" class="level3">
+<h3 class="anchored" data-anchor-id="add-repositories">Add Repositories</h3>
 <p>Open a local R Console and add these two additional Repositories.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">repos =</span> <span class="fu">c</span>(</span>
@@ -229,15 +229,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">INWTlab =</span> <span class="st">"https://inwtlab.github.io/drat/"</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="generate-c-code" class="level3">
+<h3 class="anchored" data-anchor-id="generate-c-code">Generate C++ Code</h3>
+<p>(Re-)generate <code>R/rstanmodel.R</code> and the C++ Source Code:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("rstantools")</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>rstantools<span class="sc">::</span><span class="fu">rstan_config</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="install-package" class="level3">
+<h3 class="anchored" data-anchor-id="install-package">Install Package</h3>
 <p>Load and Install the R-Package</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"{package}"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"{package}"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="start-the-app" class="level3">
 <h3 class="anchored" data-anchor-id="start-the-app">Start the app</h3>
 <p>Load and attach package</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"{package}"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"{package}"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Run the app</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>{package}<span class="sc">::</span><span class="fu">startApplication</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>{package}<span class="sc">::</span><span class="fu">startApplication</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="use-renv" class="level3">
+<h3 class="anchored" data-anchor-id="use-renv">Use Renv</h3>
+<p>Install <code>R</code> dependencies with <code>renv</code></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("renv")</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="run-the-shinyapp" class="level3">
+<h3 class="anchored" data-anchor-id="run-the-shinyapp">Run the shinyapp</h3>
+<p>Run the application by executing:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>shiny<span class="sc">::</span><span class="fu">runApp</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

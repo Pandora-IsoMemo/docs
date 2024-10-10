@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Pandora-IsoMemo.github.io/docs/instructions.html</loc>
-    <lastmod>2024-10-02T18:03:01.700Z</lastmod>
+    <loc>https://Pandora-IsoMemo.github.io/docs/faq.html</loc>
+    <lastmod>2024-10-10T13:24:49.498Z</lastmod>
   </url>
   <url>
     <loc>https://Pandora-IsoMemo.github.io/docs/bugs.html</loc>
-    <lastmod>2024-10-02T18:03:01.694Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Pandora-IsoMemo.github.io/docs/apps.html</loc>
-    <lastmod>2024-10-02T18:03:01.694Z</lastmod>
+    <lastmod>2024-10-10T13:24:49.498Z</lastmod>
   </url>
   <url>
     <loc>https://Pandora-IsoMemo.github.io/docs/index.html</loc>
-    <lastmod>2024-10-02T18:03:01.700Z</lastmod>
+    <lastmod>2024-10-10T13:24:49.504Z</lastmod>
   </url>
   <url>
-    <loc>https://Pandora-IsoMemo.github.io/docs/faq.html</loc>
-    <lastmod>2024-10-02T18:03:01.694Z</lastmod>
+    <loc>https://Pandora-IsoMemo.github.io/docs/apps.html</loc>
+    <lastmod>2024-10-10T13:24:49.498Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Pandora-IsoMemo.github.io/docs/instructions.html</loc>
+    <lastmod>2024-10-10T13:24:49.504Z</lastmod>
   </url>
 </urlset>
