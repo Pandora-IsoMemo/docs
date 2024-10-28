@@ -47,6 +47,7 @@ categories:
       app_beta_url: "https://pandoraapp.earth/app/causalr-beta"
       docker_image: "causalr"
       img: "img/causalr.png"
+      video: "https://www.youtube.com/watch?v=jlT15oblKBE"
 
     - name: "DSSM"
       full_name: "Data Search and Spatiotemporal Modelling"
@@ -59,6 +60,7 @@ categories:
       app_beta_url: "https://pandoraapp.earth/app/dssm-beta"
       docker_image: "dssm"
       img: "img/dssm.jpg"
+      video: "https://www.youtube.com/watch?v=dQm-0rJeyzY"
 
     - name: "MapR"
       info_text: |
@@ -102,6 +104,7 @@ categories:
       app_beta_url: "https://pandoraapp.earth/app/resources-beta"
       docker_image: "resources"
       img: "img/resources.jpg"
+      video: "https://www.youtube.com/watch?v=mOyjs0Uov8w"
 
     - name: "TraceR"
       info_text: |

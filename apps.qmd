@@ -35,6 +35,15 @@ for (app in info$categories$apps) {
     )
   }
 
+  # Add Video Button
+  if (!is.null(app$video)) {
+    cat(
+      '[Video Tutorial](',
+      app$video,
+      '){.btn .btn-outline-primary .btn role="button"}\n'
+    )
+  }
+
   # Add App Button
   if (!is.null(app$app_url)) {
     cat(
