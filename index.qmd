@@ -34,5 +34,12 @@ Report any issues you encounter and help us improve our apps and services by pro
 Find the source code to all our Applications.
 :::
 
+::: {.callout-note icon=false}
+### [Scripts](scripts.qmd)
+
+Scripts & tools to work with the Pandora Apps
+:::
+
+
 
 Explore each section to make the most of our offerings and support resources.
