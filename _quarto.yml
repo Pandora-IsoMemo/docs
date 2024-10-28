@@ -20,6 +20,8 @@ website:
         text: FAQ
       - href: bugs.qmd
         text: Bug Reports
+      - href: scripts.qmd
+        text: Scripts
     tools:
       - icon: github
         href: https://github.com/Pandora-IsoMemo

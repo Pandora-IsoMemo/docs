@@ -1,0 +1,57 @@
+# Scripts
+
+## Run all dockerized apps script based
+
+The `all-in-one-app.sh` is a command line tool for all Pandora-Isomemo docker
+applications. 
+
+### Features:
+
+- List available Pandora Docker images and running Pandora containers
+- Pulls Pandora Docker images
+- Starts Pandora Docker containers
+- Stops running Pandora Docker containers
+
+### Requierments
+
+The script requires the following software to be installed:
+
+* [docker](https://docs.docker.com/)
+    * [Install Docker on Linux](https://docs.docker.com/desktop/install/linux-install/)
+    * [Install Docker on MacOs](https://docs.docker.com/desktop/install/mac-install/)
+* [netstat](https://linux.die.net/man/8/netstat)
+    * Generally installed by default on most Linux distributions and on macOS
+    * Linux: `sudo apt update & sudo apt install net-tools`
+    * MacOS: `brew install net-tools`
+
+### Usage
+
+To use the script, follow these steps:
+
+1. Download the [script](https://github.com/Pandora-IsoMemo/docs/blob/main/scripts/all-in-one-app.sh)
+
+   ```bash
+   curl -O -L https://raw.githubusercontent.com/Pandora-IsoMemo/docs/refs/heads/main/scripts/all-in-one-app.sh
+   ```
+
+3. Make the script executable: 
+
+   ```bash
+   chmod +x all-in-one-app.sh
+   ```
+4. Run the script
+
+   ```bash
+   ./all-in-one-app.sh`
+   ```
+
+   Use `sudo` if your user isn't in the Docker group.
+
+
+::: {.callout-warning icon=false}
+### Warning:
+
+* **The script was tested on Linux**
+* **It should run on MacOS**
+* **Currently, there is no working solution for Windows**
+:::

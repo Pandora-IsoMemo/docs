@@ -9,6 +9,9 @@ instructions:
 * [MacOS](https://docs.docker.com/desktop/install/mac-install/)
 * [Linux](https://docs.docker.com/desktop/install/linux-install/)
 
+After Docker is installed you can pull & run the app manually or use the
+[`all-in-one-app.sh`-Script](scripts.qmd).
+
 #### 2. Download and install docker image of the app
 
 This image contains all elements necessary for you to run the app from a web
