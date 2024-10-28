@@ -3,11 +3,10 @@ project:
 
 website:
   announcement: 
-    icon: info-circle
     dismissable: false
-    content: "**This site is still under construction.**"
-    type: warning
-    position: below-navbar
+    content: "**BRINGING BIG DATA & ADVANCED COMPUTATIONAL MODELLING TOGETHER**"
+    type: info
+    position: above-navbar
   title: "Pandora & IsoMemo Documentation Hub"
   search: true
   navbar:
@@ -16,7 +15,7 @@ website:
       - href: index.qmd
         text: Home
       - href: apps.qmd
-        text: Shiny Apps
+        text: Applications
       - href: faq.qmd
         text: FAQ
       - href: bugs.qmd

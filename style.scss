@@ -22,10 +22,43 @@ $headings-color: $darkblue !default;
 .btn.btn-outline-primary {
   color: $purple;
   border-color: $purple;
+  font-weight: bold;
 }
 
 .btn.btn-outline-primary:hover {
   color: white;
   background-color: $purple;
   border-color: $purple;
+}
+
+// announcment bar
+#quarto-announcement {
+  color: $purple;
+  background: white;
+
+  /* Center the content */
+  .quarto-announcement-content {
+    //text-align: center;
+    margin: 0 auto;
+  }
+}
+
+
+// callout block
+div.callout-note.callout {
+  border-left-color: $purple !important;
+}
+
+
+// h1 header
+h1 {
+  text-align: center;
+  //color: $purple !important;
+}
+
+$h1-font-size: 50px;
+
+// images
+img {
+  border-radius: 15px;
 }

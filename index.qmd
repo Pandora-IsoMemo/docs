@@ -9,11 +9,30 @@ The currently available Pandora & IsoMemo software can be accessed on the Pandor
 Here you can explore comprehensive documentation and resources for all our apps
 and packages. Navigate through the following links to find detailed information:
 
-- [Shiny Apps](apps.qmd) - Here, you will also find the link to the online app,
-  the source code, installation instructions and documentation for each app.
-- [FAQ](faq.qmd) - Find answers to frequently asked questions and helpful tips.
-- [Bug Reports](bugs.qmd) - Report any issues you encounter and help us improve
-  our apps and services by providing feedback.
+
+::: {.callout-note icon=false}
+### [Applications](apps.qmd)
+
+Here, you will also find the link to the online app, the source code, installation instructions, and documentation for each app.
+:::
+
+::: {.callout-note icon=false}
+### [FAQ](faq.qmd)
+
+Find answers to frequently asked questions and helpful tips.
+:::
+
+::: {.callout-note icon=false}
+### [Bug Reports](bugs.qmd)
+
+Report any issues you encounter and help us improve our apps and services by providing feedback.
+:::
+
+::: {.callout-note icon=false}
+### [Github Organizations](https://github.com/Pandora-IsoMemo)
+
+Find the source code to all our Applications.
+:::
+
 
 Explore each section to make the most of our offerings and support resources.
-
