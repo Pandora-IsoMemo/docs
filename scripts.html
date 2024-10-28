@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Pandora &amp; IsoMemo Documentation Hub</title>
+<title>scripts – Pandora &amp; IsoMemo Documentation Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -92,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -108,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Bug Reports</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./scripts.html"> 
+    <a class="nav-link active" href="./scripts.html" aria-current="page"> 
 <span class="menu-text">Scripts</span></a>
   </li>  
 </ul>
@@ -130,81 +164,69 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="pandora-isomemo-computational-lab" class="level1">
-<h1>Pandora &amp; IsoMemo Computational Lab</h1>
-<p>The Pandora &amp; IsoMemo Computational Lab provides access to a diverse range of computational tools, including Artificial Intelligence (AI), for data querying, manipulation, and modeling. The lab encompasses various types of models across numerous R and Python applications. These models, either already available or under development, are designed for studying complex systems such as network analysis, Bayesian analysis of differential equations, Agent-Based modeling, and Bayesian power law analysis. Additionally, the lab offers tools for time series analysis, such as Bayesian counterfactual analysis, Bayesian Point Break analysis, and AI-based tipping point detection. Other features include tools for spatiotemporal modeling and different types of causal analysis, such as Bayesian networks, Bayesian regression, and Bayesian model selection algorithms.</p>
-<p>The currently available Pandora &amp; IsoMemo software can be accessed on the Pandora &amp; IsoMemo software platform on GitHub. Each software repository provides detailed instructions on installation and usage. All software features a user-friendly interface developed using Shiny technology. Many of the applications offer innovative self-developed modeling. In some instances, user-friendly interfaces along with novel modeling features were developed in collaboration with the developers of modeling software packages. In other cases, user-friendly interfaces were designed for software packages available under open licenses.</p>
-<section id="welcome-to-our-documentation-hub" class="level2">
-<h2 class="anchored" data-anchor-id="welcome-to-our-documentation-hub">Welcome to our Documentation Hub!</h2>
-<p>Here you can explore comprehensive documentation and resources for all our apps and packages. Navigate through the following links to find detailed information:</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
+<section id="scripts" class="level1">
+<h1>Scripts</h1>
+<section id="run-all-dockerized-apps-script-based" class="level2">
+<h2 class="anchored" data-anchor-id="run-all-dockerized-apps-script-based">Run all dockerized apps script based</h2>
+<p>The <code>all-in-one-app.sh</code> is a command line tool for all Pandora-Isomemo docker applications.</p>
+<section id="features" class="level3">
+<h3 class="anchored" data-anchor-id="features">Features:</h3>
+<ul>
+<li>List available Pandora Docker images and running Pandora containers</li>
+<li>Pulls Pandora Docker images</li>
+<li>Starts Pandora Docker containers</li>
+<li>Stops running Pandora Docker containers</li>
+</ul>
+</section>
+<section id="requierments" class="level3">
+<h3 class="anchored" data-anchor-id="requierments">Requierments</h3>
+<p>The script requires the following software to be installed:</p>
+<ul>
+<li><a href="https://docs.docker.com/">docker</a>
+<ul>
+<li><a href="https://docs.docker.com/desktop/install/linux-install/">Install Docker on Linux</a></li>
+<li><a href="https://docs.docker.com/desktop/install/mac-install/">Install Docker on MacOs</a></li>
+</ul></li>
+<li><a href="https://linux.die.net/man/8/netstat">netstat</a>
+<ul>
+<li>Generally installed by default on most Linux distributions and on macOS</li>
+<li>Linux: <code>sudo apt update &amp; sudo apt install net-tools</code></li>
+<li>MacOS: <code>brew install net-tools</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="usage" class="level3">
+<h3 class="anchored" data-anchor-id="usage">Usage</h3>
+<p>To use the script, follow these steps:</p>
+<ol type="1">
+<li><p>Download the <a href="https://github.com/Pandora-IsoMemo/docs/blob/main/scripts/all-in-one-app.sh">script</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-O</span> <span class="at">-L</span> https://raw.githubusercontent.com/Pandora-IsoMemo/docs/refs/heads/main/scripts/all-in-one-app.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Make the script executable:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x all-in-one-app.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Run the script</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./all-in-one-app.sh</span><span class="kw">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Use <code>sudo</code> if your user isn’t in the Docker group.</p></li>
+</ol>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="./apps.html">Applications</a>
+Warning:
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Here, you will also find the link to the online app, the source code, installation instructions, and documentation for each app.</p>
+<ul>
+<li><strong>The script was tested on Linux</strong></li>
+<li><strong>It should run on MacOS</strong></li>
+<li><strong>Currently, there is no working solution for Windows</strong></li>
+</ul>
 </div>
 </div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<a href="./faq.html">FAQ</a>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Find answers to frequently asked questions and helpful tips.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<a href="./bugs.html">Bug Reports</a>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Report any issues you encounter and help us improve our apps and services by providing feedback.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<a href="https://github.com/Pandora-IsoMemo">Github Organizations</a>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Find the source code to all our Applications.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<a href="./scripts.html">Scripts</a>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Scripts &amp; tools to work with the Pandora Apps</p>
-</div>
-</div>
-<p>Explore each section to make the most of our offerings and support resources.</p>
 
 
+</section>
 </section>
 </section>
 
