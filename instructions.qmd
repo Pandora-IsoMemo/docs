@@ -9,6 +9,9 @@ instructions:
 * [MacOS](https://docs.docker.com/desktop/install/mac-install/)
 * [Linux](https://docs.docker.com/desktop/install/linux-install/)
 
+After Docker is installed you can pull & run the app manually or use the
+`all-in-one-app.sh`-Script (See Section 5).
+
 #### 2. Download and install docker image of the app
 
 This image contains all elements necessary for you to run the app from a web
@@ -53,6 +56,37 @@ press Enter.
 ```bash
 http://127.0.0.1:3838/
 ```
+
+#### 5. Run dockerized apps via the `all-in-one-app.sh` Script
+
+The `all-in-one-app.sh` - is a command line tool for all Pandora-Isomemo docker
+applications. It provides the following features:
+
+- List available Pandora Docker images and running Pandora containers
+- Pull Pandora Docker images
+- Start Pandora Docker containers
+- Stop running Pandora Docker containers
+
+To use the script, follow these steps:
+
+1. Download the [script](https://github.com/Pandora-IsoMemo/docs/blob/main/scripts/all-in-one-app.sh)
+
+   ```bash
+   curl -O -L https://raw.githubusercontent.com/Pandora-IsoMemo/docs/refs/heads/main/scripts/all-in-one-app.sh
+   ```
+
+3. Make the script executable: 
+
+   ```bash
+   chmod +x all-in-one-app.sh
+   ```
+4. Run the script
+
+   ```bash
+   ./all-in-one-app.sh`
+   ```
+
+   run with sudo if your user isn't in the docker group.
 
 #### Troubleshooting
 
