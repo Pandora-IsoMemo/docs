@@ -11,7 +11,7 @@ info <- yaml::yaml.load_file('packages.yaml')
 #| output: asis
 for (app in info$categories$apps) {
   # Header
-  cat('#', app$name)
+  cat('##', app$name)
   if(!is.null(app$full_name)) {
     cat(" -", app$full_name)
   }
@@ -55,7 +55,7 @@ for (app in info$categories$apps) {
 
   # Generate tabset enviroment
   cat('\n::: {.panel-tabset}\n')
-  cat('##', app$name, '\n')
+  cat('###', app$name, '\n')
 
   # Add image of the app
   if (!is.null(app$img) && file.exists(app$img)) {
@@ -75,7 +75,7 @@ for (app in info$categories$apps) {
   if (!is.null(app$info_text)) {
     cat(app$info_text, "\n\n")
   }
-  
+
   # Add Instructions
   instruction_template <- readLines("instructions.qmd")
   if (!is.null(app$docker_image)) {
@@ -96,8 +96,8 @@ for (app in info$categories$apps) {
 
   # Remove rstantools section if not used
   if (is.null(app$is_stan)) {
-    start <- grep("### Generate C++ Code", instruction_template, fixed = TRUE)
-    end <- grep("### Install Package", instruction_template, fixed = TRUE)
+    start <- grep("#### Generate C++ Code", instruction_template, fixed = TRUE)
+    end <- grep("#### Install Package", instruction_template, fixed = TRUE)
     if (length(start) > 0 && length(end) > 0 && start < end) {
         instruction_template <- instruction_template[-(start:(end-1))]
     }
@@ -106,8 +106,8 @@ for (app in info$categories$apps) {
   # Remove install package section
   if (!is.null(app$is_renv)) {
     # renv
-    start <- grep("### Install Package", instruction_template, fixed = TRUE)
-    end <- grep("### Use Renv", instruction_template, fixed = TRUE)
+    start <- grep("#### Install Package", instruction_template, fixed = TRUE)
+    end <- grep("#### Use Renv", instruction_template, fixed = TRUE)
     if (length(start) > 0 && length(end) > 0 && start < end) {
         instruction_template <- instruction_template[-(start:(end-1))]
     }
@@ -116,14 +116,12 @@ for (app in info$categories$apps) {
   # Remove renv section
   else {
     #nicht renv
-    start <- grep("### Use Renv", instruction_template, fixed = TRUE)
+    start <- grep("#### Use Renv", instruction_template, fixed = TRUE)
     end <- length(instruction_template) + 1
     if (length(start) > 0 && length(end) > 0 && start < end) {
         instruction_template <- instruction_template[-(start:(end-1))]
     }
   }
-
-
 
   cat(instruction_template, sep="\n")
   cat(':::\n')

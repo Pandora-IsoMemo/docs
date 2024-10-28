@@ -1,6 +1,6 @@
-## Docker Installation (recommended)
+### Docker Installation (recommended)
 
-### 1. Install the software Docker
+#### 1. Install the software Docker
 
 Download installation files from one of the links below and follow installation
 instructions:
@@ -9,7 +9,7 @@ instructions:
 * [MacOS](https://docs.docker.com/desktop/install/mac-install/)
 * [Linux](https://docs.docker.com/desktop/install/linux-install/)
 
-### 2. Download and install docker image of the app
+#### 2. Download and install docker image of the app
 
 This image contains all elements necessary for you to run the app from a web
 browser. Run this code in a local terminal 
@@ -30,7 +30,7 @@ browser. Run this code in a local terminal
 docker pull ghcr.io/pandora-isomemo/{docker-image}:main
 ```
 
-### 3. Run the application in Docker 
+#### 3. Run the application in Docker 
 
 Steps 1 and 2 install the app. To run the app at any time after the installation
 open a terminal (as described in point 2) copy paste the text below into the
@@ -44,7 +44,7 @@ docker run -p 3838:3838 ghcr.io/pandora-isomemo/{docker-image}:main
 If the app is shutdown on Docker or if the terminal is closed the app will no
 longer work in your web browser (see point 4).
 
-### 4. Display the app in a web browser
+#### 4. Display the app in a web browser
 
 Once the app is running in Docker you need to display it in a web browser. For
 this, copy-paste the address below into your web browser’s address input and
@@ -54,7 +54,7 @@ press Enter.
 http://127.0.0.1:3838/
 ```
 
-### Troubleshooting
+#### Troubleshooting
 
 1. You may not be able to install Docker due a lack of administrative rights.
    If so, contact your IT department to grant installation rights.
@@ -69,15 +69,15 @@ http://127.0.0.1:3838/
 4. In some problematic cases, you may consider using an older version of Docker.
    See: https://docs.docker.com/desktop/release-notes/
 
-## Local Installation
+### Local Installation
 
-### Install R
+#### Install R
 
 - [Windows](https://cran.r-project.org/bin/windows/base/)
 - [MacOS](https://cran.r-project.org/bin/macosx/)
 - [Linux (Ubuntu)](https://cran.r-project.org/bin/linux/ubuntu/)
 
-### Add Repositories
+#### Add Repositories
 
 Open a local R Console and add these two additional Repositories.
 
@@ -91,7 +91,7 @@ options(
 )
 ```
 
-### Generate C++ Code
+#### Generate C++ Code
 
 (Re-)generate `R/rstanmodel.R` and the C++ Source Code:
 
@@ -100,7 +100,7 @@ options(
 rstantools::rstan_config()
 ```
 
-### Install Package
+#### Install Package
 
 Load and Install the R-Package
 
@@ -108,7 +108,7 @@ Load and Install the R-Package
 install.packages("{package}")
 ```
 
-### Start the app
+#### Start the app
 
 Load and attach package
 
@@ -122,7 +122,7 @@ Run the app
 {package}::startApplication()
 ```
 
-### Use Renv
+#### Use Renv
 
 Install `R` dependencies with `renv`
 
@@ -131,7 +131,7 @@ Install `R` dependencies with `renv`
 renv::restore()
 ```
 
-### Run the shinyapp
+#### Run the shinyapp
 
 Run the application by executing:
 

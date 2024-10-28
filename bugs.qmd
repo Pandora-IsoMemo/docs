@@ -6,7 +6,7 @@ issue with the package name and what steps you have already done, preferably as
 descriptive as possible (screenshots, etc.). We will get back to you as soon as
 we can to solve the issue.
 
-### Please provide
+## Please provide
 
 1. All commands that led to the installation error.
 2. The full output of:
