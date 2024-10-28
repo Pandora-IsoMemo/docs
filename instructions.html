@@ -160,10 +160,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="docker-installation-recommended" class="level2">
-<h2 class="anchored" data-anchor-id="docker-installation-recommended">Docker Installation (recommended)</h2>
-<section id="install-the-software-docker" class="level3">
-<h3 class="anchored" data-anchor-id="install-the-software-docker">1. Install the software Docker</h3>
+<section id="docker-installation-recommended" class="level3">
+<h3 class="anchored" data-anchor-id="docker-installation-recommended">Docker Installation (recommended)</h3>
+<section id="install-the-software-docker" class="level4">
+<h4 class="anchored" data-anchor-id="install-the-software-docker">1. Install the software Docker</h4>
 <p>Download installation files from one of the links below and follow installation instructions:</p>
 <ul>
 <li><a href="https://docs.docker.com/desktop/windows/install/">Windows</a></li>
@@ -171,8 +171,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="https://docs.docker.com/desktop/install/linux-install/">Linux</a></li>
 </ul>
 </section>
-<section id="download-and-install-docker-image-of-the-app" class="level3">
-<h3 class="anchored" data-anchor-id="download-and-install-docker-image-of-the-app">2. Download and install docker image of the app</h3>
+<section id="download-and-install-docker-image-of-the-app" class="level4">
+<h4 class="anchored" data-anchor-id="download-and-install-docker-image-of-the-app">2. Download and install docker image of the app</h4>
 <p>This image contains all elements necessary for you to run the app from a web browser. Run this code in a local terminal</p>
 <p><strong>Open a terminal (command line):</strong></p>
 <ul>
@@ -188,19 +188,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Copy paste the text below into the terminal and press Enter:</strong></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull ghcr.io/pandora-isomemo/{docker-image}:main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="run-the-application-in-docker" class="level3">
-<h3 class="anchored" data-anchor-id="run-the-application-in-docker">3. Run the application in Docker</h3>
+<section id="run-the-application-in-docker" class="level4">
+<h4 class="anchored" data-anchor-id="run-the-application-in-docker">3. Run the application in Docker</h4>
 <p>Steps 1 and 2 install the app. To run the app at any time after the installation open a terminal (as described in point 2) copy paste the text below into the terminal and press Enter. Wait for a notification that the app is in “listening” mode.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-p</span> 3838:3838 ghcr.io/pandora-isomemo/{docker-image}:main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If the app is shutdown on Docker or if the terminal is closed the app will no longer work in your web browser (see point 4).</p>
 </section>
-<section id="display-the-app-in-a-web-browser" class="level3">
-<h3 class="anchored" data-anchor-id="display-the-app-in-a-web-browser">4. Display the app in a web browser</h3>
+<section id="display-the-app-in-a-web-browser" class="level4">
+<h4 class="anchored" data-anchor-id="display-the-app-in-a-web-browser">4. Display the app in a web browser</h4>
 <p>Once the app is running in Docker you need to display it in a web browser. For this, copy-paste the address below into your web browser’s address input and press Enter.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">http://127.0.0.1:3838/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="troubleshooting" class="level3">
-<h3 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h3>
+<section id="troubleshooting" class="level4">
+<h4 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h4>
 <ol type="1">
 <li>You may not be able to install Docker due a lack of administrative rights. If so, contact your IT department to grant installation rights.</li>
 <li>While trying to use Docker on Windows you may receive the message that the “Windows Subsystem for Linux” is missing. To install it follow these <a href="https://learn.microsoft.com/en-us/windows/wsl/install">instructions</a></li>
@@ -209,18 +209,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </section>
 </section>
-<section id="local-installation" class="level2">
-<h2 class="anchored" data-anchor-id="local-installation">Local Installation</h2>
-<section id="install-r" class="level3">
-<h3 class="anchored" data-anchor-id="install-r">Install R</h3>
+<section id="local-installation" class="level3">
+<h3 class="anchored" data-anchor-id="local-installation">Local Installation</h3>
+<section id="install-r" class="level4">
+<h4 class="anchored" data-anchor-id="install-r">Install R</h4>
 <ul>
 <li><a href="https://cran.r-project.org/bin/windows/base/">Windows</a></li>
 <li><a href="https://cran.r-project.org/bin/macosx/">MacOS</a></li>
 <li><a href="https://cran.r-project.org/bin/linux/ubuntu/">Linux (Ubuntu)</a></li>
 </ul>
 </section>
-<section id="add-repositories" class="level3">
-<h3 class="anchored" data-anchor-id="add-repositories">Add Repositories</h3>
+<section id="add-repositories" class="level4">
+<h4 class="anchored" data-anchor-id="add-repositories">Add Repositories</h4>
 <p>Open a local R Console and add these two additional Repositories.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">repos =</span> <span class="fu">c</span>(</span>
@@ -230,32 +230,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="generate-c-code" class="level3">
-<h3 class="anchored" data-anchor-id="generate-c-code">Generate C++ Code</h3>
+<section id="generate-c-code" class="level4">
+<h4 class="anchored" data-anchor-id="generate-c-code">Generate C++ Code</h4>
 <p>(Re-)generate <code>R/rstanmodel.R</code> and the C++ Source Code:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("rstantools")</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>rstantools<span class="sc">::</span><span class="fu">rstan_config</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="install-package" class="level3">
-<h3 class="anchored" data-anchor-id="install-package">Install Package</h3>
+<section id="install-package" class="level4">
+<h4 class="anchored" data-anchor-id="install-package">Install Package</h4>
 <p>Load and Install the R-Package</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"{package}"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="start-the-app" class="level3">
-<h3 class="anchored" data-anchor-id="start-the-app">Start the app</h3>
+<section id="start-the-app" class="level4">
+<h4 class="anchored" data-anchor-id="start-the-app">Start the app</h4>
 <p>Load and attach package</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"{package}"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Run the app</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>{package}<span class="sc">::</span><span class="fu">startApplication</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="use-renv" class="level3">
-<h3 class="anchored" data-anchor-id="use-renv">Use Renv</h3>
+<section id="use-renv" class="level4">
+<h4 class="anchored" data-anchor-id="use-renv">Use Renv</h4>
 <p>Install <code>R</code> dependencies with <code>renv</code></p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("renv")</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="run-the-shinyapp" class="level3">
-<h3 class="anchored" data-anchor-id="run-the-shinyapp">Run the shinyapp</h3>
+<section id="run-the-shinyapp" class="level4">
+<h4 class="anchored" data-anchor-id="run-the-shinyapp">Run the shinyapp</h4>
 <p>Run the application by executing:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>shiny<span class="sc">::</span><span class="fu">runApp</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 

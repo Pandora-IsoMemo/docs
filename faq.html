@@ -176,32 +176,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="docker---container-port-is-already-allocated" class="level1">
-<h1>Docker - container port is already allocated</h1>
+<section id="docker---container-port-is-already-allocated" class="level2">
+<h2 class="anchored" data-anchor-id="docker---container-port-is-already-allocated">Docker - container port is already allocated</h2>
 <p>In case the following error occurs</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker:</span> Error response from daemon: driver failed <span class="op">&lt;</span>...<span class="op">&gt;</span> Bind for 0.0.0.0:3838 failed: port is already allocated.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>One must <strong>stop the container that is still running</strong>. This can be done as follows:</p>
-<section id="check-which-container-is-running-with" class="level2">
-<h2 class="anchored" data-anchor-id="check-which-container-is-running-with">1. Check which container is running with:</h2>
+<section id="check-which-container-is-running-with" class="level3">
+<h3 class="anchored" data-anchor-id="check-which-container-is-running-with">1. Check which container is running with:</h3>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>that list all running containers and should generate a similiar output like:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a> <span class="ex">CONTAINER</span> ID   IMAGE                                     COMMAND                  CREATED             STATUS             PORTS                                       NAMES</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> <span class="ex">eddc62f0081d</span>   ghcr.io/pandora-isomemo/osteo-bior:main   <span class="st">"Rscript -e OsteoBio…"</span>   About an hour ago   Up About an hour   0.0.0.0:3838-<span class="op">&gt;</span>3838/tcp, :::3838-<span class="op">&gt;</span>3838/tcp   confident_colden</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="stop-the-container-using-the-container-id-here-eddc62f0081d" class="level2">
-<h2 class="anchored" data-anchor-id="stop-the-container-using-the-container-id-here-eddc62f0081d">2. Stop the container using the <code>CONTAINER ID</code> (here: <code>eddc62f0081d</code>)</h2>
+<section id="stop-the-container-using-the-container-id-here-eddc62f0081d" class="level3">
+<h3 class="anchored" data-anchor-id="stop-the-container-using-the-container-id-here-eddc62f0081d">2. Stop the container using the <code>CONTAINER ID</code> (here: <code>eddc62f0081d</code>)</h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> stop <span class="op">&lt;</span>YOUR_CONTAINER_ID<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="remove-the-container-using-the-container-id." class="level2">
-<h2 class="anchored" data-anchor-id="remove-the-container-using-the-container-id.">3. Remove the container using the <code>CONTAINER ID</code>.</h2>
+<section id="remove-the-container-using-the-container-id." class="level3">
+<h3 class="anchored" data-anchor-id="remove-the-container-using-the-container-id.">3. Remove the container using the <code>CONTAINER ID</code>.</h3>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> rm <span class="op">&lt;</span>YOUR_CONTAINER_ID<span class="op">&gt;</span><span class="kw">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="check-if-no-container-is-running-anymore." class="level3">
 <h3 class="anchored" data-anchor-id="check-if-no-container-is-running-anymore.">4. Check if no container is running anymore.</h3>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The table should be empty now. Try to run the container.</p>
 
 
-</section>
 </section>
 </section>
 
