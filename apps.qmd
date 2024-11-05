@@ -103,6 +103,30 @@ for (app in info$categories$apps) {
     )
   }
 
+  # Add installation note
+  if (!is.null(app$inst_notes)) {
+    instruction_template <- gsub(
+      "\\{inst-notes\\}",
+      app$inst_notes,
+      instruction_template
+    )
+  }
+  else {
+    start <- grep(
+      ":::{.callout-warning #inst-notes}",
+      instruction_template,
+      fixed = TRUE
+    )
+    end <- grep(
+      "Install R",
+      instruction_template,
+      fixed = TRUE
+    )
+    if (length(start) > 0 && length(end) > 0 && start < end) {
+        instruction_template <- instruction_template[-(start:(end-1))]
+    }
+  }
+
   # Remove rstantools section if not used
   if (is.null(app$is_stan)) {
     start <- grep("#### Generate C++ Code", instruction_template, fixed = TRUE)
