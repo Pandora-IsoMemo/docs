@@ -49,6 +49,16 @@ categories:
       img: "img/causalr.png"
       video: "https://www.youtube.com/watch?v=jlT15oblKBE"
 
+    - name: "ChangeR"
+      info_text: |
+        An App to display and identify isotopic change points in human tooth sections.
+      repo_url: "https://github.com/Pandora-IsoMemo/ChangeR"
+      doc_url: "https://pandora-isomemo.github.io/ChangeR/"
+      app_url: "https://pandoraapp.earth/app/changer"
+      app_beta_url: "https://pandoraapp.earth/app/changer-beta"
+      docker_image: "changer"
+      img: "img/changer.png"
+
     - name: "DSSM"
       full_name: "Data Search and Spatiotemporal Modelling"
       info_text: |
