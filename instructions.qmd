@@ -74,6 +74,12 @@ http://127.0.0.1:3838/
 
 ### Local Installation
 
+:::{.callout-warning #inst-notes}
+#### Installation Note
+
+{inst-notes}
+:::
+
 #### Install R
 
 - [Windows](https://cran.r-project.org/bin/windows/base/)

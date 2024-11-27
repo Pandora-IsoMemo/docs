@@ -58,6 +58,12 @@ categories:
       app_beta_url: "https://pandoraapp.earth/app/changer-beta"
       docker_image: "changer"
       img: "img/changer.png"
+      inst_notes: |
+        ChangeR utilizes [JAGS MCMC library](https://mcmc-jags.sourceforge.io/).
+        This has been tested only on Linux (Ubuntu). For Windows & Mac user, you
+        can either use the dockerized Version of the App or refer to the offical
+        [installation manual](https://sourceforge.net/projects/mcmc-jags/files/Manuals/4.x/jags_installation_manual.pdf)
+        of JAGS.
 
     - name: "DSSM"
       full_name: "Data Search and Spatiotemporal Modelling"
